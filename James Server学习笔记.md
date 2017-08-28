@@ -79,7 +79,7 @@ NNTP Service started plain:119
 FetchMail Disabled
 ```
 
-# 3. 	配置james
+# 3. 配置james
 默认配置启动James服务，只能给内网发送邮件，我们的要求是可以给外网的其他邮箱发邮件，比如163，qq,sina等邮箱发送邮件，那么我们必须修改James默认配置，接下来我们就来看看如何修改
 还是打开config.xml文件，找到postmaster标签：
 ```
@@ -149,7 +149,7 @@ FetchMail Disabled
 上面的三个IP要根据你的电脑情况来填写，第一个是你电脑的IP地址，也就是服务器地址，第二和第三个都是DNS地址，这三个地址都可以通过在cmd输入命令ipconfig中查看得到。
 这样就算配置完成了，重新启动一下服务器。
 
-#4. 创建邮件账号
+# 4. 创建邮件账号
 打开cmd，输入telnet localhost 4555,会提示你输入login id和password,这个id和password可以在config.xml中修改，CTRL+F查找password，把login和password的值换掉，默认是root和root。
 ```
 <account login="root" password="!changeme!"/>
@@ -166,7 +166,7 @@ FetchMail Disabled
 
 ![](http://upload-images.jianshu.io/upload_images/7628226-607d09ffad52ef2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#5. 使用邮件客户端收发邮件
+# 5. 使用邮件客户端收发邮件
 这里介绍用Foxmail客户端来进行邮件的收发。
 
 ![image.png](http://upload-images.jianshu.io/upload_images/7628226-9451c17e6a9c19af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -338,7 +338,7 @@ public class MailClientTest {
 }
 ```
 
-#7. Matchers
+# 7. Matchers
 james带来了许多标准匹配器即matcher。每个都实现了Matcher API，如下所示，并提供了现有MTA以及其他有用的扩展通用的功能。界面相当简单; 它包括一对生命周期方法，init()和destroy()，和一对记账方法，getMatcherInfo()和getMatcherConfig()，还有main方法--match()，它用来操作Mail对象。该Mail引用提供对容器状态，邮件消息和元数据的访问以进行处理。
 ```
 public interface Matcher
@@ -356,14 +356,14 @@ public interface Matcher
 以下是写好的Matcher接口。
 
 
-![5~ABJ219E1V38RQCO1PGI}U.png](http://upload-images.jianshu.io/upload_images/7628226-fd2bfc330b65aa8d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![5~ABJ219E1V38RQCO1PGI}U.png] (http://upload-images.jianshu.io/upload_images/7628226-fd2bfc330b65aa8d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
-![VU](http://upload-images.jianshu.io/upload_images/7628226-0fda35a5d327bb6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![VU] (http://upload-images.jianshu.io/upload_images/7628226-0fda35a5d327bb6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-#8. Mailet
+# 8. Mailet
 许多james的功能是通过Mailet API实现的，习惯于用servlet的人会对此很熟悉。
 与Matcher API一样，Mailet接口提供了init()和destroy()两个生命周期的方法。两种有返回值的方法。第一个， getMailetInfo()，返回一个String对象，其中包含了与mailet关联的作者，版本和版权等信息。第二个，getMailetConfig()，用来返回最近的mailet配置信息。
 ```
@@ -379,12 +379,12 @@ public interface Mailet
 主进程在services()方法中进行，带有一个Mail对象参数。此对象提供对容器状态，邮件消息和要进行处理的元数据的附加访问。
 以下是已经实现的mailet接口。
 
-![1.png](http://upload-images.jianshu.io/upload_images/7628226-a17dd0f5ef576862.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![1.png] (http://upload-images.jianshu.io/upload_images/7628226-a17dd0f5ef576862.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![%H15_BJOCH15(72DPA(U%D5.png](http://upload-images.jianshu.io/upload_images/7628226-2c2bfc13d5efeb52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![%H15_BJOCH15(72DPA(U%D5.png] (http://upload-images.jianshu.io/upload_images/7628226-2c2bfc13d5efeb52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-#9. Mailet和Matcher的简单尝试
+# 9. Mailet和Matcher的简单尝试
 Mailet API是一个用来创建邮件处理程序的简单的API,它被配置在邮件服务器端执行,分匹配器Matcher和Mailet的接口两种,匹配器根据特定的条件匹配邮件消息,并触发相应的Mailet。
 Mailet的简单可编程接口可以用来做一些邮件处理,比如反垃圾邮件,检查邮件病毒以及邮件博客等等,利用移动设备可发送email的功能,可以做到手机通过mail发送信息到邮件服务器交给Mailet处理,形成移动博客的模型。
 
@@ -466,5 +466,5 @@ public class MailetTest1 extends GenericMailet  {
 ```
 这样就完成了我们自定义的Mailet的配置部署工作了。重启James服务器，则此Mailet即可生效。
 
-#10.总结
+# 10.总结
 至此，james server的笔记结束了，它是一个很不错的开源邮箱项目，希望能帮到大家，谢谢。
