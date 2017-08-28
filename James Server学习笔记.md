@@ -164,7 +164,7 @@ FetchMail Disabled
 
 下面是一些命令的含义：
 
-![](http://upload-images.jianshu.io/upload_images/7628226-607d09ffad52ef2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![asd](http://upload-images.jianshu.io/upload_images/7628226-607d09ffad52ef2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 # 5. 使用邮件客户端收发邮件
 这里介绍用Foxmail客户端来进行邮件的收发。
@@ -179,7 +179,8 @@ FetchMail Disabled
 ![image.png](http://upload-images.jianshu.io/upload_images/7628226-b92f4d3597bb638f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 至此，邮件服务器的搭建和客户端的测试已经完成了。
 [文章参考](http://clararun.me/2017/05/14/%E7%94%A8Apache-James%E6%90%AD%E5%BB%BA%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%94%B6%E5%8F%91%E9%82%AE%E4%BB%B6/)
-#6. 用JavaMail测试James
+
+# 6. 用JavaMail测试James
 为了确保我们的设置正常运行，我们将编写一组快速发送消息和列出收件箱内容的类，模拟典型电子邮件客户端的基本功能。
 ```
 import java.io.IOException;
