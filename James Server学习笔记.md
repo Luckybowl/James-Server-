@@ -356,12 +356,9 @@ public interface Matcher
 
 以下是写好的Matcher接口。
 
+![5~ABJ219E1V38RQCO1PGI}U.png](http://upload-images.jianshu.io/upload_images/7628226-fd2bfc330b65aa8d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![5~ABJ219E1V38RQCO1PGI}U.png] (http://upload-images.jianshu.io/upload_images/7628226-fd2bfc330b65aa8d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-
-
-![VU] (http://upload-images.jianshu.io/upload_images/7628226-0fda35a5d327bb6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![VU](http://upload-images.jianshu.io/upload_images/7628226-0fda35a5d327bb6e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 # 8. Mailet
@@ -380,9 +377,9 @@ public interface Mailet
 主进程在services()方法中进行，带有一个Mail对象参数。此对象提供对容器状态，邮件消息和要进行处理的元数据的附加访问。
 以下是已经实现的mailet接口。
 
-![1.png] (http://upload-images.jianshu.io/upload_images/7628226-a17dd0f5ef576862.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![1.png](http://upload-images.jianshu.io/upload_images/7628226-a17dd0f5ef576862.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![%H15_BJOCH15(72DPA(U%D5.png] (http://upload-images.jianshu.io/upload_images/7628226-2c2bfc13d5efeb52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![%H15_BJOCH15(72DPA(U%D5.png](http://upload-images.jianshu.io/upload_images/7628226-2c2bfc13d5efeb52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 # 9. Mailet和Matcher的简单尝试
